@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
+		<title>Salty's Portfolio</title>
 		<style>
 			body { margin: 0; }
 		</style>
@@ -10,13 +10,34 @@
 	</head>
 	<body>
     <canvas id="webgl"></canvas>
-    	<nav><a href="/">Cube</a>
+    	<nav><a href="/">0xSALTY</a>
 	<ul>
-		<li>Explore</li>
-		<li>Create</li>
+
+				<li><a href="/" id="aboutMeLink">About me.</a></li>
+				<li><a href="/">Experience.</a></li>
+				<li><a href="/" id="contactMeLink">Contact me.</a></li>
+
+
 	</ul>
 			</nav>
-			<h1 class="title">Salty</h1>
+				<div id="aboutMePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>About Me.</h2>
+            <p id="aboutMeDetails"></p>
+        </div>
+    </div>
+
+    	<div id="contactMePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me.</h2>
+            <p id="contactMeDetails"></p>
+        </div>
+    </div>
+
+
+			<h1 class="title">Keelan Salter</h1>
 
 		<script type="module" src="/main.js"></script>
 	</body>
