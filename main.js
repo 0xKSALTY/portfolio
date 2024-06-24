@@ -146,29 +146,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// contact me popup add functionality here
-/*
-
-document.addEventListener('DOMContentLoaded', function() {
-    var contactMeLink = document.getElementById('contactMeLink');
-    var contactMePopup = document.getElementById('contactMePopup');
-    var closeBtn = document.getElementsByClassName('close')[0];
-    var aboutMeDetails = document.getElementById('contactMeDetails');
-
-    contactMeLink.onclick = function(event) {
-        event.preventDefault();
-        contactMeDetails.textContent = "Email: ksaltercv@gmail.com \n\n Linkedin: Keelan Salter\n Github: 0xSALTY\n";
-        contactMePopup.style.display = 'block';
+function toggleDropdown() {
+    var dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+    } else {
+        dropdownMenu.style.display = 'block';
     }
-
-    closeBtn.onclick = function() {
-        contactMePopup.style.display = 'none';
-    }
+}
 
 window.onclick = function(event) {
-        if (event.target == contactMePopup) {
-          contactMePopup.style.display = 'none';
-        }
+    if (!event.target.matches('.dropdown-toggle')) {
+        var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+        dropdownMenus.forEach(function(menu) {
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            }
+        });
     }
-});
-*/
+}
