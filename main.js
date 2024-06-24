@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     aboutMeLink.onclick = function(event) {
         event.preventDefault();
-        aboutMeDetails.textContent = "Hello! I'm Keelan, a Cyber Security undergrad with a passion for all things computer science! I have a military background and have been an Airtraffic Controller for nearly 6 years. I am now looking to follow my passion with all things computer science. I often use my spare time developing tools using Python and C, I have also just started to learn C++. I love the occasional CTF and playing with boxes within Hack The Box!";
+        aboutMeDetails.textContent = "Hello! I'm Keelan, a Cyber Security undergrad with a passion for all things computer science! I have a military background and have been an Airtraffic Controller for nearly 6 years. I am now looking to follow my passion with all things computer science. I often use my spare time developing tools using Python and C, I have also just started to learn C++. I love the occasional CTF and playing with boxes within Hack The Box! I also dabble in some front-end and back-end Web Dev!";
         aboutMePopup.style.display = 'block';
     }
 
