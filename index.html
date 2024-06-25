@@ -5,26 +5,32 @@
     <title>Salty's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="overflow-x-hidden font-mono bg-gray-100 relative">
     <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
-    <nav class="navbar flex justify-between p-16 text-white relative z-10">
+   <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
+    <div class="flex items-center space-x-4">
         <a href="/" class="font-bold">0xKSALTY</a>
-        <ul class="flex gap-16 list-none">
-            <li><a href="/" id="aboutMeLink" class="font-bold">About me.</a></li>
-            <li><a href="/" class="font-bold">Experience.</a></li>
-            <li class="relative group">
-                <a href="javascript:void(0)" class="font-bold dropbtn">Projects.</a>
-                <div class="dropdown-content hidden absolute bg-white text-black group-hover:block">
-                    <a href="#" class="block px-4 py-2">Project 1</a>
-                    <a href="#" class="block px-4 py-2">Project 2</a>
-                    <a href="#" class="block px-4 py-2">Project 3</a>
-                </div>
-            </li>
-            <li><a href="/" id="contactMeLink" class="font-bold">Contact me.</a></li>
+        <ul class="flex space-x-4">
+            <li><a href="https://github.com/0xKSALTY" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/keelan-salter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:ksaltercv@gmail.com"><i class="fa fa-envelope"></i></a></li>
         </ul>
+    </div>
+    <ul class="flex space-x-6 list-none">
+        <li><a href="#" id="aboutMeLink" class="font-bold">About me.</a></li>
+        <li><a href="#" class="font-bold">Experience.</a></li>
+        <li class="relative group">
+            <a href="javascript:void(0)" class="font-bold dropbtn">Projects.</a>
+            <div class="dropdown-content hidden absolute bg-white text-black group-hover:block">
+                <a href="#" class="block px-4 py-2">Project 1</a>
+                <a href="#" class="block px-4 py-2">Project 2</a>
+                <a href="#" class="block px-4 py-2">Project 3</a>
+            </div>
+        </li>
+    </ul>
     </nav>
-
     <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
         <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
             <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
@@ -94,3 +100,4 @@
 </body>
 </html>
 """)
+
