@@ -63,15 +63,6 @@ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 const meTexture = new THREE.TextureLoader().load('me.jpg');
 
-/* image of me
-const me = new THREE.Mesh(
-	new THREE.BoxGeometry(1, 1, 1),
-	new THREE.MeshBasicMaterial({map: meTexture})
-);
-scene.add(me);
-
-*/
-
 // camera movement
 function moveCamera(){
 	const t = document.body.getBoundingClientRect().top;
@@ -79,7 +70,6 @@ function moveCamera(){
 	camera.position.x = t * -0.0002;
 	camera.position.y = y * -0.0002;
 }
-//document.body.onscroll = moveCamera
 
 const canvas = document.querySelector(".webgl")
 renderer.render(scene, camera)
@@ -125,28 +115,46 @@ nl.fromTo('nav', {y:'-100%'}, {y:'0%'})
 
 // About Me. POPUP
 document.addEventListener('DOMContentLoaded', function() {
-
     var aboutMeLink = document.getElementById('aboutMeLink');
     var aboutMePopup = document.getElementById('aboutMePopup');
-    var closeBtn = document.getElementsByClassName('close')[0];
     var aboutMeDetails = document.getElementById('aboutMeDetails');
+    var closeBtns = document.querySelectorAll('.close');
 
     aboutMeLink.onclick = function(event) {
         event.preventDefault();
-        aboutMeDetails.textContent = "Hello! I'm Keelan, a Cyber Security undergrad with a passion for all things computer science! I have a military background and have been an Airtraffic Controller for nearly 6 years. I am now looking to follow my passion with all things computer science. I often use my spare time developing tools using Python and C, I have also just started to learn C++. I love the occasional CTF and playing with boxes within Hack The Box! I also dabble in some front-end and back-end Web Dev!";
-        aboutMePopup.style.display = 'block';
+        aboutMeDetails.innerHTML = 
+            "Hello! I'm Keelan, a Cyber Security undergraduate with a passion for all things computer science. My journey into the tech world is unique, starting with a solid foundation in the military, where I served as an Air Traffic Controller for nearly six years. This experience has honed my attention to detail, discipline, and problem-solving skills, which I now channel into the field of cybersecurity and computer science.<br><br>" +
+            "I am deeply fascinated by the endless possibilities within computer science and spend much of my spare time developing tools and applications using Python and C. Recently, I've embarked on a new learning adventure with C++.<br><br>" +
+            "Beyond programming, I enjoy participating in Capture The Flag (CTF) competitions and exploring challenges on platforms like Hack The Box, where I can put my skills to the test and continuously learn new techniques. My interests also extend to web development, where I dabble in both front-end and back-end technologies.<br><br>" +
+            "As I transition from my military career to fully immerse myself in the world of computer science, I am eager to apply my skills and knowledge to real-world challenges, collaborate with like-minded individuals, and contribute to the ever-evolving tech landscape. Thank you for visiting my portfolio, and I look forward to connecting with you!";
+
+        aboutMePopup.classList.remove('hidden');
+        aboutMePopup.classList.add('opacity-100');
+        aboutMePopup.querySelector('.popup-content').classList.add('scale-100');
     }
 
-    closeBtn.onclick = function() {
-        aboutMePopup.style.display = 'none';
-    }
+    closeBtns.forEach(function(btn) {
+        btn.onclick = function() {
+            aboutMePopup.classList.remove('opacity-100');
+            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
+            setTimeout(function() {
+                aboutMePopup.classList.add('hidden');
+            }, 300);
+        }
+    });
 
     window.onclick = function(event) {
         if (event.target == aboutMePopup) {
-            aboutMePopup.style.display = 'none';
+            aboutMePopup.classList.remove('opacity-100');
+            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
+            setTimeout(function() {
+                aboutMePopup.classList.add('hidden');
+            }, 300);
         }
     }
 });
+
+
 
 function toggleDropdown() {
     var dropdownMenu = document.querySelector('.dropdown-menu');
@@ -167,3 +175,14 @@ window.onclick = function(event) {
         });
     }
 }
+const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+hiddenElements.forEach((el) => observer.observe(el));
+
