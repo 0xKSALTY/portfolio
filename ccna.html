@@ -1,15 +1,14 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Salty's Portfolio</title>
+    <title>Salty's Portfolio - CCNA Progress</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ccna.css">
 </head>
-<body class="overflow-x-hidden font-mono bg-gray-100 relative">
+<body class="overflow-x-hidden font-mono bg-black relative">
     <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
     <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
         <div class="flex items-center space-x-4">
@@ -26,7 +25,7 @@
             <li class="relative">
                 <a href="#" id="optionsMenuButton" class="font-mono">Cyber Journey.</a>
                 <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
-                    <a href= "/ccna" class="block px-4 py-2 text-sm text-gray-700">CCNA WIP</a>
+                    <a href="ccna.html" class="block px-4 py-2 text-sm text-gray-700">CCNA WIP</a>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 2</a>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 3</a>
                 </div>
@@ -37,70 +36,47 @@
         <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
             <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
             <h2 class="text-2xl mb-4 text-center font-semibold">About Me</h2>
-            <p id="aboutMeDetails" class="text-center"></p>
+            <p id="aboutMeDetails" class="text-center">
+                Hello! I'm Keelan, a Cyber Security undergraduate with a passion for all things computer science. My journey into the tech world is unique, starting with a solid foundation in the military, where I served as an Air Traffic Controller for nearly six years. This experience has honed my attention to detail, discipline, and problem-solving skills, which I now channel into the field of cybersecurity and computer science.<br><br>
+            I am deeply fascinated by the endless possibilities within computer science and spend much of my spare time developing tools and applications using Python and C. Recently, I've embarked on a new learning adventure with C++.<br><br>
+            Beyond programming, I enjoy participating in Capture The Flag (CTF) competitions and exploring challenges on platforms like Hack The Box, where I can put my skills to the test and continuously learn new techniques. My interests also extend to web development, where I dabble in both front-end and back-end technologies.<br><br>
+            As I transition from my military career to fully immerse myself in the world of computer science, I am eager to apply my skills and knowledge to real-world challenges, collaborate with like-minded individuals, and contribute to the ever-evolving tech landscape. Thank you for visiting my portfolio, and I look forward to connecting with you!
+            </p>
         </div>
     </div>
 
-    <div id="contactMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20">
-        <div class="bg-white p-8 rounded shadow-lg relative">
-            <span class="close absolute top-0 right-0 p-4 cursor-pointer">&times;</span>
-            <h2 class="text-2xl mb-4">Contact Me.</h2>
-            <p id="contactMeDetails"></p>
+    
+    <h1 class="text-center text-5xl mt-4 text-white" style="padding-top: 8rem;">Configured DHCP on a Wireless Router</h1>
+
+    <div class="scroll-container">
+        <div class="scroll-item">
+            <div class="image-container">
+                <div class="item"><img src="CCNA_IMG_1.png" alt="CCNA Image 1"></div>
+            </div>
+            <div class="reflection-box left">
+                <p>Engaging in a hands-on experience with network configuration using Cisco Packet Tracer was useful. I enjoyed observing the real-time communication between PCs and a wireless router, it provided me with a better understanding of networks.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <div class="image-container">
+                <div class="item"><img src="CCNA_IMG_2.png" alt="CCNA Image 2"></div>
+            </div>
+            <div class="reflection-box right">
+                <p>Experimenting with changes in IP range and the default gateway’s IP address was interesting. It allowed me to gain insights into how the devices communicate and how to solve problems when they occur, for example, when changing the IP address of the default gateway, the PC no longer had internet access, this was easily fixed by disabling and reenabling the DHCP on PC0.</p>
+            </div>
+        </div>
+        <div class="scroll-item">
+            <div class="image-container">
+                <div class="item"><img src="CCNA_IMG_3.png" alt="CCNA Image 3"></div>
+            </div>
+            <div class="reflection-box left">
+                <p>I encountered minimal challenges during this activity, it did show me the importance of familiarising myself with the Cisco Packet Tracer interface and the location of specific devices. To enhance my skills, I have completed additional activities on the software, I am now confident with the interface.</p>
+                <p>From this activity, I learned that IP configuration using DHCP is simple, due to the IP assignment being automatic. It was also interesting to see the simplicity of reconfiguring an IP address on an end device when the default gateway's IP address had been changed.</p>
+                <p>This activity has given me skills to configure DHCP settings on a wireless router and end devices. Also, it has improved my understanding of the implications of altering IP parameters.</p>
+            </div>
         </div>
     </div>
 
-    <h1 class="text-center text-5xl mt-4 sticky relative z-10 text-white" style="padding-top: 8rem;">CCNA Progress.</h1>
-
-    <script type="module" src="/main.js"></script>
-    
-    <script>
-     document.addEventListener('DOMContentLoaded', function() {
-    var closeBtns = document.querySelectorAll('.close');
-    var optionsMenuButton = document.getElementById('optionsMenuButton');
-    var optionsMenu = document.getElementById('optionsMenu');
-
-
-    closeBtns.forEach(function(btn) {
-        btn.onclick = function() {
-            aboutMePopup.classList.remove('opacity-100');
-            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
-            setTimeout(function() {
-                aboutMePopup.classList.add('hidden');
-            }, 300);
-        }
-    });
-
-    window.onclick = function(event) {
-        if (event.target == aboutMePopup) {
-            aboutMePopup.classList.remove('opacity-100');
-            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
-            setTimeout(function() {
-                aboutMePopup.classList.add('hidden');
-            }, 300);
-        } else if (!event.target.matches('#optionsMenuButton')) {
-            if (optionsMenu.classList.contains('block')) {
-                optionsMenu.classList.remove('block');
-                optionsMenu.classList.add('hidden');
-            }
-        }
-    }
-
-    optionsMenuButton.onclick = function(event) {
-      event.preventDefault();
-      optionsMenu.classList.toggle('hidden');
-      optionsMenu.classList.toggle('block');
-          };
-        });
-    </script>
-    
-
-<section class="bg-gray-100 flex items-start justify-start h-screen z-10">
-    <div class="bg-gray-500 text-white p-2 rounded-lg shadow-lg mt-4 ml-4 z-10">
-        <h1 class="text-2xl relative z-10">Configured DHCP on a Wireless Router</h1>
-    </div>
-</section>
-
-
+    <script type="module" src="ccna.js"></script>
 </body>
 </html>
-
