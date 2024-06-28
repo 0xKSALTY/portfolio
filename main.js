@@ -4,7 +4,6 @@ import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import { normalMap } from 'three/examples/jsm/nodes/Nodes.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import gsap from "gsap";
-import * as REACT from 'react';
 
 
 // rendering and scene
