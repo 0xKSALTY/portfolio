@@ -1,0 +1,53 @@
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the canvas spans the entire width */
+    height: 100vh; /* Ensure the canvas covers the full height */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 1em; /* Base font size */
+}
+
+.navbar {
+    width: 100%; /* Ensure the navbar spans the entire width */
+}
+
+.popup {
+    display: none;
+}
+
+.popup-content {
+    transform: scale(0.75);
+    transition: transform 0.3s ease-in-out;
+    padding: 2rem;
+    overflow: auto;
+    resize: both;
+}
+
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.image-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: black;
+}
+
+/* Ensure the sections can be scrolled */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}

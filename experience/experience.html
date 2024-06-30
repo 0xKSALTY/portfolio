@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Salty's Portfolio - Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="experience.css">
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+</head>
+<body class="overflow-x-hidden font-mono relative">
+    <canvas id="webgl" class="fixed top-0 w-full h-full z-0"></canvas>
+    <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
+        <div class="flex items-center space-x-4">
+            <a href="/" class="font-bold">0xKSALTY</a>
+            <ul class="flex space-x-4">
+                <li><a href="https://github.com/0xKSALTY" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/keelan-salter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:ksaltercv@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <ul class="flex space-x-6 list-none">
+            <li><a href="#" id="aboutMeLink" class="font-mono">About.</a></li>
+            <li><a href="/experience/experience.html" class="font-mono">Experience.</a></li>
+            <li class="relative">
+                <a href="#" id="optionsMenuButton" class="font-mono">Cyber Journey.</a>
+                <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
+                    <a href="/ccna/ccna.html" class="block px-4 py-2 text-sm text-gray-700">CCNA WIP</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 2</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
+        <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
+            <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
+            <h2 class="text-2xl mb-4 text-center font-semibold">About Me</h2>
+            <p id="aboutMeDetails" class="text-center">
+                Hello! I'm Keelan, a Cyber Security undergraduate with a passion for all things computer science. My journey into the tech world is unique, starting with a solid foundation in the military, where I served as an Air Traffic Controller for nearly six years. This experience has honed my attention to detail, discipline, and problem-solving skills, which I now channel into the field of cybersecurity and computer science.<br><br>
+            I am deeply fascinated by the endless possibilities within computer science and spend much of my spare time developing tools and applications using Python and C. Recently, I've embarked on a new learning adventure with C++.<br><br>
+            Beyond programming, I enjoy participating in Capture The Flag (CTF) competitions and exploring challenges on platforms like Hack The Box, where I can put my skills to the test and continuously learn new techniques. My interests also extend to web development, where I dabble in both front-end and back-end technologies.<br><br>
+            As I transition from my military career to fully immerse myself in the world of computer science, I am eager to apply my skills and knowledge to real-world challenges, collaborate with like-minded individuals, and contribute to the ever-evolving tech landscape. Thank you for visiting my portfolio, and I look forward to connecting with you!
+            </p>
+        </div>
+    </div>
+
+    <h1 class="text-center text-5xl mt-2 text-black font-mono" style="padding-top: 2rem; padding-bottom: 2rem;">Experience</h1>
+
+    <div class="container mx-auto px-4">
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">Air Traffic Controller - Military</h3>
+                <p class="mt-2 text-gray-700">Oct 2018 - Current</p>
+                <ul class="list-disc list-inside mt-4 text-gray-700">
+                    <li>Maintained safety and efficiency of air traffic.</li>
+                    <li>Trained new recruits on air traffic control procedures.</li>
+                    <li>Coordinated with various teams to manage air traffic flow.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Education</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">BSc.(Hons) Cyber Security</h3>
+                <p class="mt-2 text-gray-700">The Open University - Expected Graduation: 2026</p>
+                <ul class="list-disc list-inside mt-4 text-gray-700">
+                    <li>Relevant Coursework: Network Security, Cryptography, Computer Forensics, Robotics, Web development, System Security, Communication Protocols.</li>
+                    <li>Projects: Developed a secure file sharing application using Python.</li>
+                    <li>Achievements: Graded with Distinction in all assigments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Certifications</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">COMPTIA Security +</h3>
+                <p class="mt-2 text-gray-700">Expected: OCT 2024</p>
+                <ul class="list-disc list-inside mt-4 text-gray-700">
+                    <li>Developed knowledge in the national security standard.</li>
+                </ul>
+                <h3 class="text-2xl font-semibold">CCNA</h3>
+                <p class="mt-2 text-gray-700">Expected: OCT 2026</p>
+                <ul class="list-disc list-inside mt-4 text-gray-700">
+                    <li>BSc alligned with CCNA, I will sit the CCNA exam near the end of my undergrad.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="experience.js"></script>
+</body>
+</html>
