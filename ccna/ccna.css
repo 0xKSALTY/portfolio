@@ -137,6 +137,9 @@ canvas {
     border-radius: 0.5rem;
 
 }
+.navbar a:hover {
+    color: #ff6600;
+}
 
 
 .ftp-services .slider .item img {
