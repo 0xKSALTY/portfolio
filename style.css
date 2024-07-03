@@ -20,6 +20,9 @@ body, html {
     width: 100%; /* Ensure the navbar spans the entire width */
 }
 
+.navbar a:hover {
+    color: #ff6600;
+}
 .popup {
     display: none;
 }
