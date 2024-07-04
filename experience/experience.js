@@ -1,39 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const aboutMeLink = document.getElementById('aboutMeLink');
-    const aboutMePopup = document.getElementById('aboutMePopup');
-    const close = document.querySelector('.close');
-
-    aboutMeLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        aboutMePopup.classList.remove('hidden');
-        setTimeout(() => {
-            aboutMePopup.classList.add('opacity-100');
-        }, 10);
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1200,
     });
 
-    close.addEventListener('click', () => {
-        aboutMePopup.classList.remove('opacity-100');
-        setTimeout(() => {
-            aboutMePopup.classList.add('hidden');
-        }, 300);
+    const aboutMeLink = document.getElementById('aboutMeLink');
+    const aboutMePopup = document.getElementById('aboutMePopup');
+    const closeBtn = document.querySelector('.popup-content .close');
+
+    aboutMeLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        aboutMePopup.classList.toggle('hidden');
+    });
+
+    closeBtn.addEventListener('click', function() {
+        aboutMePopup.classList.add('hidden');
     });
 
     const optionsMenuButton = document.getElementById('optionsMenuButton');
     const optionsMenu = document.getElementById('optionsMenu');
 
-    optionsMenuButton.addEventListener('click', (e) => {
-        e.preventDefault();
+    optionsMenuButton.addEventListener('click', function(event) {
+        event.preventDefault();
         optionsMenu.classList.toggle('hidden');
     });
 
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    document.addEventListener('click', function(event) {
+        if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
+            optionsMenu.classList.add('hidden');
+        }
     });
 });
