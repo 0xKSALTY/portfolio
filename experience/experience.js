@@ -1,79 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1200,
-    });
-
-    const aboutMeLink = document.getElementById('aboutMeLink');
-    const aboutMePopup = document.getElementById('aboutMePopup');
-    const closeBtn = document.querySelector('.popup-content .close');
-
-    aboutMeLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        aboutMePopup.classList.toggle('hidden');
-    });
-
-    closeBtn.addEventListener('click', function() {
-        aboutMePopup.classList.add('hidden');
-    });
-
-    const optionsMenuButton = document.getElementById('optionsMenuButton');
-    const optionsMenu = document.getElementById('optionsMenu');
-
-    optionsMenuButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        optionsMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
-            optionsMenu.classList.add('hidden');
-        }
-    });
+// Toggle About Me Popup
+document.getElementById('aboutMeLink').addEventListener('click', function() {
+    var aboutMePopup = document.getElementById('aboutMePopup');
+    aboutMePopup.classList.toggle('hidden');
+    aboutMePopup.classList.toggle('flex');
 });
 
+document.querySelector('.popup-content .close').addEventListener('click', function() {
+    var aboutMePopup = document.getElementById('aboutMePopup');
+    aboutMePopup.classList.add('hidden');
+    aboutMePopup.classList.remove('flex');
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1200,
-    });
+// Toggle Projects Dropdown
+document.getElementById('optionsMenuButton').addEventListener('click', function() {
+    var optionsMenu = document.getElementById('optionsMenu');
+    optionsMenu.classList.toggle('hidden');
+});
 
-    const aboutMeLink = document.getElementById('aboutMeLink');
-    const aboutMePopup = document.getElementById('aboutMePopup');
-    const closeBtn = document.querySelector('.popup-content .close');
-
-    aboutMeLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        aboutMePopup.classList.toggle('hidden');
-    });
-
-    closeBtn.addEventListener('click', function() {
-        aboutMePopup.classList.add('hidden');
-    });
-
-    const optionsMenuButton = document.getElementById('optionsMenuButton');
-    const optionsMenu = document.getElementById('optionsMenu');
-
-    optionsMenuButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        optionsMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
-            optionsMenu.classList.add('hidden');
-        }
-    });
-
-    const spaceship = document.getElementById('spaceship');
-
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-
-        // Add the 'rising' class to the spaceship when the user scrolls
-        if (scrollPosition > 100) {
-            spaceship.classList.add('rising');
-        } else {
-            spaceship.classList.remove('rising');
-        }
-    });
+// Show more roles
+document.getElementById('showMoreRoles').addEventListener('click', function() {
+    var additionalRoles = document.querySelector('.additional-roles');
+    if (additionalRoles.classList.contains('hidden')) {
+        additionalRoles.classList.remove('hidden');
+        this.textContent = 'Click to hide roles';
+    } else {
+        additionalRoles.classList.add('hidden');
+        this.textContent = 'Click to see more roles';
+    }
 });

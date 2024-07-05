@@ -22,7 +22,7 @@ body, html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: rgba(31, 19, 19, 0.6);
+    background-color: rgba(22, 20, 20, 0.671);
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -101,16 +101,57 @@ body, html {
     transform: translateY(0);
 }
 
-#spaceship {
-    position: fixed;
-    bottom: 0;
-    right: 85%;
-    transform: translateX(-50%);
-    width: 100px; /* Adjust the size as needed */
-    z-index: 1;
-    transition: transform 2s ease-in-out;
+
+
+.hidden {
+    display: none;
 }
 
-#spaceship.rising {
-    transform: translateX(-50%) translateY(-100vh); /* Move the spaceship up */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.vertical-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-nav ul li {
+    margin: 10px 0;
+}
+
+.vertical-nav ul li a {
+    color: white;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.vertical-nav ul li a:hover {
+    background-color: #4a5568;
+    color: #df731a;
+    border-radius: 5px;
+}
+
+.text-orange {
+    color: orange;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.text-orange:hover {
+    color: darkorange;
 }

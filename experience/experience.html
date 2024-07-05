@@ -12,7 +12,6 @@
 </head>
 <body class="overflow-x-hidden font-mono relative">
     <canvas id="webgl" class="fixed top-0 w-full h-full z-0"></canvas>
-    <img src="spaceship.png" id="spaceship" class="fixed bottom-0 z-1" alt="spaceship">
     <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
         <div class="flex items-center space-x-4">
             <a href="/" class="font-bold">0xKSALTY</a>
@@ -23,10 +22,10 @@
             </ul>
         </div>
         <ul class="flex space-x-6 list-none">
-            <li><a href="#" id="aboutMeLink" class="font-mono">About.</a></li>
+            <li><a href="#" id="aboutMeLink" class="font-mono cursor-pointer">About.</a></li>
             <li><a href="/experience/experience.html" class="font-mono">Experience.</a></li>
             <li class="relative">
-                <a href="#" id="optionsMenuButton" class="font-mono">Cyber Journey.</a>
+                <a href="#" id="optionsMenuButton" class="font-mono cursor-pointer">Cyber Journey.</a>
                 <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
                     <a href="/ccna/ccna.html" class="block px-4 py-2 text-sm text-gray-700">CCNA WIP</a>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 2</a>
@@ -35,6 +34,16 @@
             </li>
         </ul>
     </nav>
+    
+    <div class="vertical-nav">
+        <ul>
+            <li><a href="#work-experience"><i class="fa fa-briefcase"></i></a></li>
+            <li><a href="#education"><i class="fa fa-graduation-cap"></i></a></li>
+            <li><a href="#certifications"><i class="fa fa-certificate"></i></a></li>
+            <li><a href="#skills"><i class="fa fa-cogs"></i></a></li>
+        </ul>
+    </div>
+
     <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
         <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
             <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
@@ -48,85 +57,90 @@
         </div>
     </div>
 
-
-    <h1 class="text-center text-5xl mt-2 text-white font-mono" style="padding-top: 2rem; padding-bottom: 2rem;" data-aos="fade-up">Experience</h1>
+    <h1 class="text-center text-5xl mt-2 text-white font-mono" style="padding-top: 2rem; padding-bottom: 2rem;" data-aos="fade-up" id="work-experience">Experience</h1>
 
     <div class="container mx-auto px-4">
         <section class="my-8" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-white text-2xl font-semibold">Air Traffic Controller - Military</h3>
-                <p class="mt-2 text-white">Oct 2018 - Current</p>
-                <ul class="list-disc list-inside mt-4 text-white">
-                    <li>Maintained safety and efficiency of air traffic.</li>
-                    <li>Trained new recruits on air traffic control procedures.</li>
-                    <li>Coordinated with various teams to manage air traffic flow.</li>
-                    <li>Prepare and brief for flying operations</li>
-                    <li>Manage both civilian and military personnel</li>
-                </ul>
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg" id="airTrafficContainer">
+                <div class="hover-target">
+                    <h3 class="text-white text-2xl font-semibold">Air Traffic Controller - Military</h3>
+                    <p class="mt-2 text-white text-right">Oct 2018 - Current</p>
+                    <ul class="list-disc list-inside mt-4 text-white">
+                        <li>Maintained safety and efficiency of air traffic.</li>
+                        <li>Trained new recruits on air traffic control procedures.</li>
+                        <li>Coordinated with various teams to manage air traffic flow.</li>
+                        <li>Prepare and brief for flying operations</li>
+                        <li>Manage both civilian and military personnel</li>
+                    </ul>
+                    <p id="showMoreRoles" class="text-orange text-sm mt-4">Click to see more roles</p>
+                </div>
+                <div class="additional-roles hidden">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-4">
+                        <h3 class="text-white text-2xl font-semibold">Air Traffic Support Manager - Royal Navy</h3>
+                        <p class="mt-2 text-white text-right">Feb 2024 - Present</p>
+                        <ul class="list-disc list-inside mt-4 text-white">
+                            <li>General Management and Performance Management</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-4">
+                        <h3 class="text-white text-2xl font-semibold">Air Traffic Controller - Squadron DST</h3>
+                        <p class="mt-2 text-white text-right">Jan 2022 - Apr 2024</p>
+                        <ul class="list-disc list-inside mt-4 text-white">
+                            <li>Management</li>
+                            <li>live aircraft control</li>
+                            <li>public speaking</li>
+                            <li>safety and risk management</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-4">
+                        <h3 class="text-white text-2xl font-semibold">Air Traffic Controller | Aviation Operations Manager - Royal Navy</h3>
+                        <p class="mt-2 text-white text-right">Oct 2018 - Dec 2021</p>
+                        <ul class="list-disc list-inside mt-4 text-white">
+                            <li>Performance Management</li>
+                            <li>risk management</li>
+                            <li>daily aviation briefing</li>
+                            <li>live aircraft control.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-white text-2xl font-semibold">Air Traffic Support Manager - Royal Navy</h3>
-                <p class="mt-2 text-white">Feb 2024 - Present</p>
-                <ul class="list-disc list-inside mt-4 text-white">
-                    <li>General Management and Performance Management</li>
-                </ul>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-white text-2xl font-semibold">Air Traffic Controller - Squadron DST</h3>
-                <p class="mt-2 text-white">Jan 2022 - Apr 2024</p>
-                <ul class="list-disc list-inside mt-4 text-white">
-                    <li>Management</li>
-                    <li>live aircraft control</li>
-                    <li>public speaking</li>
-                    <li>safety and risk management</li>
-                </ul>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <h3 class="text-white text-2xl font-semibold">Air Traffic Controller | Aviation Operations Manager - Royal Navy</h3>
-                <p class="mt-2 text-white">Oct 2018 - Dec 2021</p>
-                <ul class="list-disc list-inside mt-4 text-white">
-                    <li>Performance Management</li>
-                    <li>risk management</li>
-                    <li>daily aviation briefing</li> 
-                    <li>live aircraft control.</li>
-                </ul>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg mt-8">
                 <h3 class="text-white text-2xl font-semibold">Service Advisor - Nissan Motor Corporation</h3>
-                <p class="mt-2 text-white">May 2017 - Oct 2018</p>
+                <p class="mt-2 text-white text-right">May 2017 - Oct 2018</p>
                 <ul class="list-disc list-inside mt-4 text-white">
                     <li>Provided customer service and support</li>
                     <li>Managed service schedules and customer inquiries</li>
                     <li>Coordinated with technical teams for vehicle maintenance and repairs</li>
                 </ul>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg mt-8">
                 <h3 class="text-white text-2xl font-semibold">Call Center Representative - Screwfix</h3>
-                <p class="mt-2 text-white">May 2016 - May 2017</p>
+                <p class="mt-2 text-white text-right">May 2016 - May 2017</p>
                 <ul class="list-disc list-inside mt-4 text-white">
                     <li>Handled customer calls and inquiries</li>
                     <li>Provided product information and support</li>
                     <li>Assisted with order processing and issue resolution</li>
                 </ul>
             </div>
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg mt-8">
                 <h3 class="text-white text-2xl font-semibold">Supervisor - The Podymore Inn</h3>
-                <p class="mt-2 text-white">May 2014 - May 2015</p>
+                <p class="mt-2 text-white text-right">May 2014 - May 2015</p>
                 <ul class="list-disc list-inside mt-4 text-white">
                     <li>Supervised staff and daily operations</li>
                     <li>Ensured high standards of customer service</li>
                     <li>Managed inventory and supplies</li>
                 </ul>
             </div>
-            
         </section>
         
-        <section class="my-8" data-aos="fade-up">
+        <section class="my-8" data-aos="fade-up" id="education">
             <h2 class="text-3xl font-bold mb-4">Education</h2>
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h3 class="text-white text-2xl font-semibold">BSc.(Hons) Cyber Security</h3>
-                <p class="mt-2 text-white font-bold">The Open University - Expected Graduation: 2026</p>
+                <p class="mt-2 text-white font-bold">The Open University</p> 
+                <p class="text-right">Jan 2023 - Oct 2026</p>
                 <ul class="list-disc list-inside mt-4 text-white">
                     <li>Achievements: Graded with Distinction in all assignments to date.</li>
                     <br>
@@ -154,11 +168,26 @@
                         <li>Project Management</li>
                     </ul>
                 </ul>
-                
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-8">
+                <h3 class="text-white text-2xl font-semibold">HNC Level 4: Leadership and Management</h3>
+                <p class="mt-2 text-white font-bold">ILM</p> 
+                <p class="mt-2 text-white text-right">Dec 2019 - Feb 2020</p>
+                <ul class="list-disc list-inside mt-4 text-white">
+                    <li>Distinction</li>
+                    <li>Developed skills to lead and manage personnel</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-8">
+                <h3 class="text-white text-2xl font-semibold">GCSE</h3>
+                <p class="mt-2 text-white font-bold">Stanchester Academy</p> 
+                <p class="mt-2 text-white text-right">Sept 2010 - Sept 2014</p>
+                <ul class="list-disc list-inside mt-4 text-white">
+                    <li>11 x GCSE's graded A-C</li>
+                </ul>
             </div>
         </section>
-
-        <section class="my-8" data-aos="fade-up">
+        <section class="my-8" data-aos="fade-up" id="certifications">
             <h2 class="text-white text-3xl font-bold mb-4">Certifications</h2>
             <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
                 <h3 class="text-white text-2xl font-semibold">COMPTIA Security +</h3>
@@ -175,7 +204,7 @@
                 </ul>
             </div>
         </section>
-        <section class="my-8" data-aos="fade-up">
+        <section class="my-8" data-aos="fade-up" id="skills">
             <h2 class="text-white text-3xl font-bold mb-4">Skills</h2>
             <div class="bg-gray-600 p-6 rounded-lg shadow-lg">
                 <h3 class="text-white text-2xl font-semibold">Programming</h3>
@@ -204,7 +233,6 @@
 
     </div>
     
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
