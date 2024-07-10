@@ -155,33 +155,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-function toggleDropdown() {
-    var dropdownMenu = document.querySelector('.dropdown-menu');
-    if (dropdownMenu.style.display === 'block') {
-        dropdownMenu.style.display = 'none';
-    } else {
-        dropdownMenu.style.display = 'block';
-    }
-}
-
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-toggle')) {
-        var dropdownMenus = document.querySelectorAll('.dropdown-menu');
-        dropdownMenus.forEach(function(menu) {
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            }
-        });
-    }
-}
-const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
-            }
-        });
-    });
-hiddenElements.forEach((el) => observer.observe(el));
-

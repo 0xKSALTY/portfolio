@@ -15,9 +15,20 @@ body, html {
     font-family: "Roboto Mono", sans-serif;
     font-size: 1em; /* Base font size */
 }
-
+canvas#webgl {
+    pointer-events: none;
+}
 .navbar {
     width: 100%; /* Ensure the navbar spans the entire width */
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+#optionsMenu {
+    z-index: 1001;
 }
 
 .navbar a:hover {

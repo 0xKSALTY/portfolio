@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+    <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
 
 <body class="overflow-x-hidden font-mono bg-gray-100 relative">
     <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
@@ -40,48 +41,40 @@
         </div>
     </div>
 
+
     <h1 class="title text-center text-5xl mt-4 relative z-10 text-white" style="padding-top: 8rem;">Keelan Salter</h1>
 
     <script type="module" src="/main.js"></script>
     
     <script>
      document.addEventListener('DOMContentLoaded', function() {
-    var closeBtns = document.querySelectorAll('.close');
     var optionsMenuButton = document.getElementById('optionsMenuButton');
     var optionsMenu = document.getElementById('optionsMenu');
 
+    optionsMenuButton.onclick = function(event) {
+        event.preventDefault();
+        optionsMenu.classList.toggle('hidden');
+        optionsMenu.classList.toggle('block');
+    };
 
-    closeBtns.forEach(function(btn) {
-        btn.onclick = function() {
-            aboutMePopup.classList.remove('opacity-100');
-            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
-            setTimeout(function() {
-                aboutMePopup.classList.add('hidden');
-            }, 300);
+    // Close the menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
+            optionsMenu.classList.add('hidden');
+            optionsMenu.classList.remove('block');
         }
     });
 
-    window.onclick = function(event) {
-        if (event.target == aboutMePopup) {
-            aboutMePopup.classList.remove('opacity-100');
-            aboutMePopup.querySelector('.popup-content').classList.remove('scale-100');
-            setTimeout(function() {
-                aboutMePopup.classList.add('hidden');
-            }, 300);
-        } else if (!event.target.matches('#optionsMenuButton')) {
-            if (optionsMenu.classList.contains('block')) {
-                optionsMenu.classList.remove('block');
-                optionsMenu.classList.add('hidden');
-            }
-        }
+    // Allow links in the dropdown to work
+    var dropdownLinks = optionsMenu.getElementsByTagName('a');
+    for (var i = 0; i < dropdownLinks.length; i++) {
+        dropdownLinks[i].onclick = function(event) {
+            event.stopPropagation(); // Prevent the click from closing the dropdown
+            // The default link behavior (navigation) will occur
+        };
     }
-
-                optionsMenuButton.onclick = function(event) {
-                event.preventDefault();
-                optionsMenu.classList.toggle('hidden');
-                optionsMenu.classList.toggle('block');
-            };
-        });
+    
+});
     </script>
     
 </body>
