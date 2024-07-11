@@ -2,19 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Salty's Portfolio | Operating Systems</title>
+    <title>Salty's Portfolio - Experience</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="os.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
-
-<body class="overflow-x-hidden font-mono bg-gray-100 relative">
-   
-
-    <script type="module" src="/os.js"></script>
+</head>
+<body class="overflow-x-hidden font-mono relative">
+    <canvas id="webgl" class="fixed top-0 w-full h-full z-0"></canvas>
+    <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
+        <div class="flex items-center space-x-4">
+            <a href="/" class="font-bold">0xKSALTY</a>
+            <ul class="flex space-x-4">
+                <li><a href="https://github.com/0xKSALTY" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/keelan-salter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:ksaltercv@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <ul class="flex space-x-6 list-none">
+            <li><a href="#" id="aboutMeLink" class="font-mono cursor-pointer">About.</a></li>
+            <li><a href="/experience/experience.html" class="font-mono">Experience.</a></li>
+            <li class="relative">
+                <a href="#" id="optionsMenuButton" class="font-mono cursor-pointer">Cyber Journey.</a>
+                <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
+                    <a href="/ccna/ccna.html" class="block px-4 py-2 text-sm text-gray-700">Networking</a>
+                    <a href="/operating_systems/os.html" class="block px-4 py-2 text-sm text-gray-700">Operating Systems</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700">Project 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
     
-    
+    <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
+        <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
+            <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
+            <h2 class="text-2xl mb-4 text-center font-semibold">About Me</h2>
+            <p id="aboutMeDetails" class="text-center">
+                Hello! I'm Keelan, a Cyber Security undergraduate with a passion for all things computer science. My journey into the tech world is unique, starting with a solid foundation in the military, where I served as an Air Traffic Controller for nearly six years. This experience has honed my attention to detail, discipline, and problem-solving skills, which I now channel into the field of cybersecurity and computer science.<br><br>
+            I am deeply fascinated by the endless possibilities within computer science and spend much of my spare time developing tools and applications using Python and C. Recently, I've embarked on a new learning adventure with C++.<br><br>
+            Beyond programming, I enjoy participating in Capture The Flag (CTF) competitions and exploring challenges on platforms like Hack The Box, where I can put my skills to the test and continuously learn new techniques. My interests also extend to web development, where I dabble in both front-end and back-end technologies.<br><br>
+            As I transition from my military career to fully immerse myself in the world of computer science, I am eager to apply my skills and knowledge to real-world challenges, collaborate with like-minded individuals, and contribute to the ever-evolving tech landscape. Thank you for visiting my portfolio, and I look forward to connecting with you!
+            </p>
+        </div>
+    </div>
+
+    <h1 class="text-center text-5xl mt-2 text-white font-mono" style="padding-top: 2rem; padding-bottom: 2rem;" data-aos="fade-up">Operating Systems</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="osI_1.png">
+            </div>
+            <div class="details">
+                <h2>Simple Backup Script</h2>
+                <p>This script uses basic commands to create a compressed archive of the 'work' directory. It echoes a message to indicate the start and end of the backup process.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="osI_2.jpeg">
+            </div>
+            <div class="details">
+                <h2>Timestamped Backup Script</h2>
+                <p>This version of the script enhances the previous one by adding a timestamp to the backup file name. It ensures each backup is unique and can be easily identified by the date it was created.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="osI_3.jpeg">
+            </div>
+            <div class="details">
+                <h2>Parameterized Backup Script</h2>
+                <p>This script introduces a parameter for the source directory, making it flexible to back up any directory specified by the user when executing the script.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="osI_4.jpeg">
+            </div>
+            <div class="details">
+                <h2>Multiple Directories Backup Script</h2>
+                <p>This advanced script iterates over a list of directories, creating separate backup files for each. It combines the features of timestamping and parameterization for robust functionality.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="module" src="os.js"></script>
     
 </body>
 </html>
-
