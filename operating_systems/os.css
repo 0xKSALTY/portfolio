@@ -60,31 +60,29 @@ body, html {
 
 .card-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
 }
 
 .card {
-    flex: 1;
-    min-width: 0;
-    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
     background: #262626;
-    margin: 10px;
+    margin: 20px 0;
     overflow: hidden;
     transition: 0.5s;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .card .imgBx {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
+    overflow: hidden;
 }
 
 .card .imgBx img {
@@ -94,9 +92,9 @@ body, html {
 }
 
 .card .details {
-    background: #262626;
+    flex: 1;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .card .details h2 {
@@ -109,4 +107,11 @@ body, html {
 .card .details p {
     margin: 20px 0 0;
     color: #fff;
+}
+
+.colored-container {
+    background-color: rgba(0, 123, 255, 0.1);
+    border: 2px solid rgba(0, 123, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
 }
