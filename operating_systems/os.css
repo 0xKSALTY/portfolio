@@ -75,7 +75,6 @@ body, html {
     transition: 0.5s;
     position: relative;
     border-radius: 15px;
-    background: rgba(80, 80, 80, 1);
 }
 
 .card .imgBx {
@@ -113,8 +112,8 @@ body, html {
 }
 
 .colored-container {
-    background-color: rgba(0, 123, 125, 0.6);
-    border: 2px solid rgba(0, 123, 125, 0.9);
+    background-color: rgba(200, 200, 200, 0.6);
+    border: 2px solid rgba(200, 200, 200, 0.9);
     padding: 1px;
     border-radius: 4px;
 }
