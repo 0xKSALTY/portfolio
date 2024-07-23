@@ -6,7 +6,7 @@ body, html {
     font-family: "Poppins", sans-serif;
     height: 100%;
     font-size: 1em;
-    background-size: auto 100%; /* Match the size */
+    background-size: auto 80%; /* Match the size */
     background-repeat: repeat-y; /* Ensure repeat to cover */
     background-position: top center; /* Align properly */
     background-image: url('os.png');
@@ -72,6 +72,7 @@ body, html {
     transition: 0.5s;
     position: relative;
     border-radius: 15px;
+    z-index: 2;
 }
 
 .card .imgBx {
@@ -109,7 +110,7 @@ body, html {
 }
 
 .colored-container {
-    background-color: rgba(200, 200, 200, 0.6);
+    background-color: rgba(200, 140, 100, 0.6);
     border: 2px solid rgba(200, 200, 200, 0.9);
     padding: 1px;
     border-radius: 4px;
@@ -117,15 +118,16 @@ body, html {
 
 .banner {
     width: 100%;
-    height: 100vh;
+    height: 80%;
     text-align: center;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    z-index: 1;
 }
 
 .banner .content {
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: min(1400px, 100vw);
@@ -138,11 +140,10 @@ body, html {
     z-index: 1;
 }
 
-.banner .content h1 {
-    font-family: 'ICA Rubrik';
+.banner .content h1 {                                                                                                                                                   font-family: 'ICA Rubrik';
     font-size: 18rem;
     line-height: 1em;
-    color: #25283B;
+    color: #282F11;
     position: relative;
 }
 
@@ -154,4 +155,3 @@ body, html {
     -webkit-text-stroke: 2px #d2d2d2;
     color: transparent;
 }
-
