@@ -2,20 +2,17 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    height: 100%;
     font-size: 1em;
-    background: linear-gradient(135deg, #4f4385, #e99eae);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url('os.jpg');
+    background-size: auto 100%; /* Match the size */
+    background-repeat: repeat-y; /* Ensure repeat to cover */
+    background-position: top center; /* Align properly */
+    background-image: url('os.png');
     color: #ffffff;
     scroll-behavior: smooth;
+    z-index: 0;
 }
 
 .navbar {
@@ -117,3 +114,44 @@ body, html {
     padding: 1px;
     border-radius: 4px;
 }
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 18rem;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
