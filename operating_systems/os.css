@@ -122,15 +122,15 @@ canvas {
 
 
 
-.ftp-services {
+.threads {
     padding-top: 50px;
 }
 
-.ftp-services .banner {
+.threads .banner {
     margin-top: 100px;
 }
 
-.ftp-services .author {
+.threads .author {
     font-family: Poppins;
     text-align: right;
     max-width: 500px;
@@ -145,7 +145,7 @@ canvas {
 }
 
 
-.ftp-services .slider .item img {
+.threads .slider .item img {
     width: auto;
     height: auto;
     max-width: 100%; /* Ensures the image doesn't overflow its container */
@@ -156,7 +156,7 @@ canvas {
 }
 
 .banner .content .model,
-.ftp-services .content .model {
+ .content {
     background-image: url(os.jpg);
     width: 100%;
     height: 300vh; /* Adjust this as necessary to fit your layout */
@@ -167,15 +167,4 @@ canvas {
     background-repeat: repeat-y;
     background-position: top center;
     z-index: 1;
-}
-
-/* Ensure that there is no gap between the two sections */
-.ftp-services {
-    padding-top: 0; /* Remove padding that might create a gap */
-    margin-top: 0; /* Remove margin that might create a gap */
-}
-
-/* Additional styling to ensure smooth transition */
-.banner, .ftp-services .banner {
-    margin-bottom: -4px; /* Negative margin to eliminate any small gaps */
 }
