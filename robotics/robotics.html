@@ -1,22 +1,110 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Salty's Portfolio - Operating Systems</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="os.css">
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+</head>
+<body class="overflow-x-hidden font-mono relative">
+    <canvas id="webgl" class="fixed top-0 w-full h-full z-0"></canvas>
+    <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
+        <div class="flex items-center space-x-4">
+            <a href="/" class="font-bold">0xKSALTY</a>
+            <ul class="flex space-x-4">
+                <li><a href="https://github.com/0xKSALTY" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/keelan-salter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:ksaltercv@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <ul class="flex space-x-6 list-none">
+            <li><a href="#" id="aboutMeLink" class="font-mono">About.</a></li>
+            <li><a href="/experience/experience.html" class="font-mono">Experience.</a></li>
+            <li class="relative">
+                <a href="#" id="optionsMenuButton" class="font-mono">Cyber Journey.</a>
+                <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
+                    <a href="/ccna/ccna.html" class="block px-4 py-2 text-sm text-gray-700">Networking</a>
+                    <a href="/operating_systems/os.html" class="block px-4 py-2 text-sm text-gray-700">Operating Systems</a>
+                    <a href="robotics.html" class="block px-4 py-2 text-sm text-gray-700">Robotics</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
+        <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
+            <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
+            <h2 class="text-2xl mb-4 text-center font-semibold">About Me</h2>
+            <p id="aboutMeDetails" class="text-center">
+                Hello! I'm Keelan, a Cyber Security undergraduate with a passion for all things computer science. My journey into the tech world is unique, starting with a solid foundation in the military, where I served as an Air Traffic Controller for nearly six years. This experience has honed my attention to detail, discipline, and problem-solving skills, which I now channel into the field of cybersecurity and computer science.<br><br>
+            I am deeply fascinated by the endless possibilities within computer science and spend much of my spare time developing tools and applications using Python and C. Recently, I've embarked on a new learning adventure with C++.<br><br>
+            Beyond programming, I enjoy participating in Capture The Flag (CTF) competitions and exploring challenges on platforms like Hack The Box, where I can put my skills to the test and continuously learn new techniques. My interests also extend to web development, where I dabble in both front-end and back-end technologies.<br><br>
+            As I transition from my military career to fully immerse myself in the world of computer science, I am eager to apply my skills and knowledge to real-world challenges, collaborate with like-minded individuals, and contribute to the ever-evolving tech landscape. Thank you for visiting my portfolio, and I look forward to connecting with you!
+            </p>
+        </div>
+    </div>
+
+    
+    <h1 class="text-center text-5xl mt-2 text-black font-mono" style="padding-top: 2rem; padding-bottom: 2rem;">Operating Systems</h1>
+
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 4">
+            <div class="item" style="--position: 1"><img src="osI_1.png" alt="first_os_img"></div>
+            <div class="item" style="--position: 2"><img src="osI_2.jpeg" alt="second_os_img"></div>
+            <div class="item" style="--position: 3"><img src="osI_3.jpeg" alt="third_os_img"></div>
+            <div class="item" style="--position: 4"><img src="osI_4.jpeg" alt="third_os_img"></div>
+        </div>
+        <div class="content">
+            <h1 data-content="0xKSALTY">
+                0xKSALTY
+            </h1>
+            <div class="author">
+                <h2>Bash Scripting.</h2>
+                <p class="leading-loose">
+                    Simple Backup Script: Creates a compressed archive of the work directory and stores it as archive-work.tgz.
+                </p>
+                <br>
+                <p class="leading-loose">
+                    Timestamped Backup Script: Enhances the previous script by adding a timestamp to the backup filename, ensuring unique backups.
+                </p>
+                <br>
+                <p class="leading-loose">
+                    Parameterized Backup Script: Allows the user to specify any directory to back up by passing it as a command-line argument.
+                </p>
+                <br>
+                <p class="leading-loose">
+                    Multiple Directories Backup Script: Iterates over a list of directories and creates separate, timestamped backups for each one.
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+
+    <div class="threads">
+        <div class="banner">
+            <div class="slider" style="--quantity: 3">
+                <div class="item" style="--position: 1"><img src="osI_5.jpeg" alt="fifth_os_img"></div>
+                <div class="item" style="--position: 2"><img src="osI_6.jpeg" alt="sixth_os_img"></div>
+                <div class="item" style="--position: 3"><img src="osI_7.jpeg" alt="seventh_os_img"></div>
+            </div>
+            <div class="content">
+                <h1 data-content="0xKSALTY">
+                    0xKSALTY
+                </h1>
+                <div class="author">
+                    <h2>Race Condition</h2>
+                    <p>The images show that thread race conditions during bank transactions cause inconsistent and unpredictable intermediate balances due to the simultaneous execution of deposits and withdrawals. Despite these inconsistencies, the final balance is correct in both cases, as the sum of transactions balances out. However, this highlights the critical need for synchronization in concurrent programming to ensure consistent states throughout the process.</p>
+                    <h2>To be continued..</h2>
+                </div>
+                <div class="model"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="os.js"></script>
+</body>
 </html>
