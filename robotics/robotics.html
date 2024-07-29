@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="robotics.css">
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body class="overflow-x-hidden font-mono relative">
     <canvas id="webgl" class="fixed top-0 w-full h-full z-0"></canvas>
@@ -49,37 +50,65 @@
     <h1 class="text-center text-5xl mt-2 text-black font-mono" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">Robotics</h1>
 
     <div class="banner">
-        <div class="slider" style="--quantity: 4">
-            <div class="item" style="--position: 1"><img src="osI_1.png" alt="first_os_img"></div>
-            <div class="item" style="--position: 2"><img src="osI_2.jpeg" alt="second_os_img"></div>
-            <div class="item" style="--position: 3"><img src="osI_3.jpeg" alt="third_os_img"></div>
-            <div class="item" style="--position: 4"><img src="osI_4.jpeg" alt="third_os_img"></div>
-        </div>
         <div class="content">
             <h1 data-content="0xKSALTY">
                 0xKSALTY
             </h1>
             <div class="author">
-                <h2>#######</h2>
+                <h2>Robotics at OU</h2>
                 <p class="leading-loose">
-                    Simple Backup Script: Creates a compressed archive of the work directory and stores it as archive-work.tgz.
+                Here are small examples of the type of work I have completed within robotics however larger and more complicated projects are restricted due to OU examination policies.
                 </p>
-                <br>
-                <p class="leading-loose">
-                    Timestamped Backup Script: Enhances the previous script by adding a timestamp to the backup filename, ensuring unique backups.
-                </p>
-                <br>
-                <p class="leading-loose">
-                    Parameterized Backup Script: Allows the user to specify any directory to back up by passing it as a command-line argument.
-                </p>
-                <br>
-                <p class="leading-loose">
-                    Multiple Directories Backup Script: Iterates over a list of directories and creates separate, timestamped backups for each one.
+                <p class="leading-loose font-bold">
+                    To be continued..
                 </p>
             </div>
             <div class="model"></div>
         </div>
     </div>
+    <div class="new-box-container">
+        <div class="new-box">
+            <h1 class="new-box-title">Motor Movement</h1>
+            <div class="image-gallery">
+                <div class="image-pair">
+                    <p class="description font-bold">The first pair of images showcases the robot moving forward with balanced motor speeds.</p>
+                    <br>
+                    <p class="description">When both motors move at the same speed, the robot travels in a straight line. Equal motor speeds ensure the robot maintains a forward trajectory without turning.</p>
+                    <img src="Robot2.png" alt="Image 1">
+                    <img src="Robot1.png" alt="Image 2">
+                </div>
+                <div class="image-pair">
+                    <p class="description font-bold">The second pair illustrates the robot turning right.</p>
+                    <br>
+                    <p class="description">The left motor moves faster than the right motor. This speed difference causes the robot to turn right. The greater the speed difference, the sharper the turn to the right.</p>
+                    <img src="Robot3.png" alt="Image 3">
+                    <img src="Robot4.png" alt="Image 4">
+                </div>
+                <div class="image-pair">
+                    <p class="description font-bold">The third pair shows the robot turning left.</p>
+                    <br>
+                    <p class="description">The right motor moves faster than the left motor. This results in the robot turning left. A larger speed difference between the motors results in a sharper left turn.</p>
+                    <img src="Robot5.png" alt="Image 5">
+                    <img src="Robot6.png" alt="Image 6">
+                </div>
+                <div class="image-pair">
+                    <p class="description font-bold">The fourth pair demonstrates the robot sharply turning left.</p>
+                    <br>
+                    <p class="description">The left motor moves forward fast while the right motor moves slower. This causes the robot to sharply turn left.</p>
+                    <img src="Robot7.png" alt="Image 7">
+                    <img src="Robot8.png" alt="Image 8">
+                </div>
+                <div class="image-pair">
+                    <p class="description font-bold">The fifth pair demonstrates the robot sharply turning right.</p>
+                    <br>
+                    <p class="description"> The right motor moves forward fast while the left motor moves slower. This causes the robot to sharply turn right.</p>
+                    <img src="Robot9.png" alt="Image 9">
+                    <img src="Robot10.png" alt="Image 10">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="robotics.js"></script>
 </body>
 </html>

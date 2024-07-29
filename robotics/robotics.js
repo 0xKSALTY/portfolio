@@ -61,3 +61,18 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(container);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const newBox = document.querySelector('.new-box');
+    if (newBox) {
+        newBox.addEventListener('mouseover', () => {
+            newBox.style.transform = 'translateY(-10px)';
+        });
+        newBox.addEventListener('mouseout', () => {
+            newBox.style.transform = 'translateY(0)';
+        });
+    }
+});
+
+
