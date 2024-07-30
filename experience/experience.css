@@ -11,7 +11,7 @@ body, html {
     background: linear-gradient(135deg, #4f4385, #e99eae);
     background-size: auto 140%;
     background-image: url(experience_bg.png);
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #ffffff;
@@ -26,7 +26,7 @@ body, html {
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
+    opacity: 0.4;
 }
 
 .navbar {
