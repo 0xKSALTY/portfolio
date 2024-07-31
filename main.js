@@ -31,10 +31,6 @@ pointLight3.position.set(-7, 8, 3)
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(pointLight, ambientLight, pointLight2, pointLight3) // add ambientLight
 
-// gridhelpers
-const gridHelper = new THREE.GridHelper(200, 50);
-const lightHelper = new THREE.PointLightHelper(pointLight3)
-scene.add(gridHelper, lightHelper)
 
 // orbit controls 
 const controls = new OrbitControls(camera, renderer.domElement);
