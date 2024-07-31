@@ -9,7 +9,7 @@ body, html {
     font-family: "Poppins", sans-serif;
     font-size: 1em;
     background: linear-gradient(135deg, #4f4385, #e99eae);
-    background-size: auto 140%;
+    background-size: auto 160%;
     background-image: url(experience_bg.png);
     background-position: center top;
     background-repeat: no-repeat;
@@ -22,11 +22,11 @@ body, html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: rgba(22, 20, 20, 0.671);
+    background-color: rgba(120, 90, 40, 0.671);
     border-radius: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .navbar {
