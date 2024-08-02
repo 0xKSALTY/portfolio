@@ -144,6 +144,9 @@ canvas {
     color: #ff6600;
 }
 
+.navbar{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 .threads .slider .item img {
     width: auto;
