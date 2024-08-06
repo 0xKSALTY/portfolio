@@ -57,7 +57,6 @@
         optionsMenu.classList.toggle('block');
     };
 
-    // Close the menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
             optionsMenu.classList.add('hidden');
@@ -65,12 +64,10 @@
         }
     });
 
-    // Allow links in the dropdown to work
     var dropdownLinks = optionsMenu.getElementsByTagName('a');
     for (var i = 0; i < dropdownLinks.length; i++) {
         dropdownLinks[i].onclick = function(event) {
             event.stopPropagation(); // Prevent the click from closing the dropdown
-            // The default link behavior (navigation) will occur
         };
     }
     
