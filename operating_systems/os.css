@@ -6,6 +6,8 @@ body, html {
     font-family: "Roboto Mono", sans-serif;
     height: 100%;
     font-size: 1em;
+    background: rgb(162,162,163);
+    background: linear-gradient(90deg, rgba(162,162,163,1) 0%, rgba(255,255,255,1) 52%, rgba(198,240,249,1) 100%);
 }
 
 canvas {
