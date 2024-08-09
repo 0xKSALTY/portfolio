@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
     <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js",
+                "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
+            }
+        }
+    </script>
 
 <body class="overflow-x-hidden font-mono bg-gray-100 relative">
     <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
